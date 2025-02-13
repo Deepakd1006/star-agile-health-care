@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myproject_healthcare-service
+  name: myproject-healthcare-service
   labels:
     app: myproject-healthcare-lbl
 spec:

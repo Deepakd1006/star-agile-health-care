@@ -13,7 +13,7 @@ spec:
         app: HealthCare
     spec:
       containers:
-      - name: financeme
+      - name: medicure
         image: chrisdee10/healthcare:latest
         imagePullPolicy: Always
         ports:

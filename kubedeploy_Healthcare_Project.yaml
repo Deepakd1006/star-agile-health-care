@@ -2,15 +2,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myproject_healthcare
+  name: myproject-healthcare
   labels:
-    app: myproject_healthcare-lbl
+    app: myproject-healthcare-lbl
 spec:
   replicas: 3
   template:
     metadata:
       labels:
-        app: HealthCare
+        app: healthcare
     spec:
       containers:
       - name: medicure
@@ -20,19 +20,19 @@ spec:
         - containerPort: 8082
   selector:
     matchLabels:
-      app: HealthCare
+      app: healthcare
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: myproject_HealthCare-service
+  name: myproject_healthcare-service
   labels:
-    app: myproject_HealthCare-lbl
+    app: myproject-healthcare-lbl
 spec:
   type: NodePort
   selector:
-    app: HealthCare
+    app: healthcare
   ports:
     - protocol: TCP
       port: 8082
